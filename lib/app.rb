@@ -63,7 +63,7 @@ class App < Sinatra::Base
   post "/issues/:id/comments" do
     @issue = Issue.find params[:id]
     if @issue.comments.create params[:comment]
-      redirect "/issues/#{params[:id]}"
+      redirect "/issues/#{params[:id]}/show"
     else
       render :"issues/show"
     end
