@@ -32,5 +32,9 @@ class App < Sinatra::Base
   end
 
   put "/issues/:id" do
+    @issue = Issue.find params[:id]
+    if @issue.update_attributes params[:issue]
+      redirect "/"
+    end
   end
 end
