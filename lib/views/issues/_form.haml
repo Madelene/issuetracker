@@ -1,0 +1,16 @@
+%form(action="/issues" method="post")
+  %p
+    %label(for="issue_name") Name
+    %input(type="text" id="issue_name" value="#{issue.name}" name="issue[name]" class="form-control")
+
+  %p
+    %label(for="issue_description") Description
+    %textarea(name="issue[description]" class="form-control")
+      =issue.description
+
+  %p
+    %button.btn.btn-primary
+      -if issue.new_record?
+        Create issue
+      -else
+        Update issue
