@@ -3,7 +3,7 @@ class App < Sinatra::Base
     "My boyfriend is very 'special'"
   end
 
-  get "/issues/" do
+  get "/issues" do
     @issues = Issue.all
     @issues
   end

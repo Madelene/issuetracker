@@ -1,1 +1,2 @@
-test_helper.rb
+require_relative "../env.rb"
+Bundler.require :test
