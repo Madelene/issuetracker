@@ -4,6 +4,7 @@ class App < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
   register Sinatra::Partial
+  use Rack::MethodOverride
 
   get "/" do
     redirect "/issues"
