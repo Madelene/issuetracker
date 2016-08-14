@@ -10,7 +10,7 @@
   -@issues.each do |issue|
     %tr
       %td
-        %a(href="/issues/#{issue.id}/edit")="Edit"
+        %a.btn.btn-primary(href="/issues/#{issue.id}/edit")="Edit"
         %a(href="/issues/#{issue.id}/show")=issue.name
       %td=issue.description
       %td=issue.id.generation_time.ago_in_words
