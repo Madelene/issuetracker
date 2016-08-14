@@ -10,6 +10,6 @@ class AppTest < MiniTest::Test
   def test_retrieves_issues
     get "/issues"
 
-    assert_equal last_response.body, "Issue"
+    assert_equal "Issue", last_response.body 
   end
 end

@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "sinatra"
+gem 'sinatra'
 gem "mongoid"
 gem "rake"
 gem "haml"
@@ -12,5 +12,5 @@ gem "sinatra-partial"
 
 group :test do
   gem "minitest", require: "minitest/autorun"
-  gem "rack-test", require: "rack/test"
+  gem 'rack-test', '~> 0.6.3', require: "rack/test"
 end
